@@ -1,0 +1,89 @@
+@import "../../../styles.scss";
+
+nav {
+  z-index: 999;
+  position: absolute;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 3%;
+  background: rgba(0, 0, 0, 0.1);
+  // background-color: black;
+  // opacity: 0.5;
+
+  .active {
+    // background-color: rgba(84, 90, 109, 0.712) !important;
+    // border-radius: 5px;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  label,
+  #hamburger {
+    display: none;
+  }
+  a {
+    font-size: 3rem;
+    color: $nav-text-color;
+    font-family: $font-chula;
+    padding: 0 2%;
+    // -webkit-text-stroke: 1px black;
+  }
+  .logo {
+    width: 7rem;
+    height: 7rem;
+  }
+  .cart {
+    width: 2.8rem;
+    height: 2.8rem;
+  }
+  .cartText {
+    display: none;
+  }
+  .itemVacio {
+    width: 10%;
+  }
+  .mainMenu {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .itemVacioMovil {
+    display: none;
+  }
+
+  @media screen and (max-width: 800px) {
+    display: inline;
+    align-items: center;
+
+    label {
+      display: inline-block;
+      position: absolute;
+      right: 5%;
+      color: $nav-text-color;
+      font-size: 5rem;
+    }
+    #hamitems a {
+      box-sizing: border-box;
+      display: block;
+      text-align: center;
+      width: 100%;
+      // border-top: 1px solid #333;
+    }
+    #hamitems {
+      display: none;
+    }
+    input:checked ~ #hamitems {
+      display: block;
+    }
+    .cart {
+      display: none;
+    }
+    .logo {
+      width: 5rem;
+      height: 5rem;
+      margin: 6% 0 0 0;
+    }
+  }
+}

@@ -1,0 +1,98 @@
+.cabProd {
+    margin-top: 2%;
+}
+
+.carouselImg {
+    height: 85vh;
+}
+
+hr {
+    margin-top: 20px;
+    border-width: 2px;
+    border-color: #707070;
+}
+
+.titulo {
+    font: normal normal bold 70px Segoe UI;
+}
+
+.ratingOp {
+    // width: 80%;
+    height: 55%;
+}
+
+.ratingTotal {
+    margin-top: 10%;
+    // text-align: right;
+}
+
+.star {
+    height: 3rem;
+}
+
+.iniStar {
+    margin-left: 11rem;
+}
+
+.comprar {
+    background: #FFD99A 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    border-radius: 41px;
+    font: italic normal bold 45px Segoe UI;
+    // margin-left: 30%;
+    margin-top: 3%;
+    padding-left: 4%;
+    padding-right: 4%;
+    width: 100%;
+    margin-bottom: 3%;
+}
+
+ngb-alert {
+    border-radius: 41px;
+}
+
+.descripcion {
+    margin-top: 8%;
+    text-align: justify;
+    font: italic normal 600 20px Segoe UI;
+}
+
+.starOp {
+    height: 1.5rem;
+}
+
+@media only screen and (max-width: 750px) {
+    .carouselImg {
+        height: 14rem;
+    }
+    .titulo {
+        font-size: 3rem;
+    }
+    .marca {
+        font-size: 2rem;
+        line-height: normal;
+    }
+    .comprar {
+        font-size: 1.5rem;
+    }
+    .carousel-producto {
+        align-content: center;
+    }
+    .star {
+        height: 2rem;
+    }
+    .precioDiv {
+        margin-top: 3%;
+        display: inline-flex !important;
+        p {
+            font-size: 2rem;
+        }
+        h4 {
+            font-size: 2rem;
+            margin-right: 80%;
+        }
+    }
+    .descripcion {
+        font-size: 1rem;
+    }
+}

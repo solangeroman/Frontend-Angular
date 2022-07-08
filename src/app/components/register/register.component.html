@@ -1,0 +1,26 @@
+<ng-template #content let-modal>
+    <div class="modal-header">
+        <h3 class="modal-title" id="modal-basic-title">Registro</h3>
+    </div>
+    <div class="modal-body">
+        <div class="container">
+            <form [formGroup]="miformulario">
+                <p>Nombre</p>
+                <input [class.is-invalid]="miformulario.get('username').touched && miformulario.get('username').invalid" type="text" class="form-control" formControlName="username" placeholder="Nombre" aria-label="Username" aria-describedby="basic-addon1" [(ngModel)]="name"
+                />
+                <p>Email</p>
+                <input [class.is-invalid]="miformulario.get('email').touched && miformulario.get('email').invalid" type="text" class="form-control" formControlName="email" placeholder="Email" aria-label="Username" aria-describedby="basic-addon1" [(ngModel)]="email" />
+                <p>Contraseña</p>
+                <input [class.is-invalid]="miformulario.get('password').touched && miformulario.get('password').invalid" type="password" class="form-control" formControlName="password" placeholder="Contaseña" aria-label="Username" aria-describedby="basic-addon1" [(ngModel)]="password"
+                />
+                <p>Confirma contraseña</p>
+                <input [class.is-invalid]="miformulario.get('password2').touched && miformulario.get('password2').invalid" type="password" class="form-control" formControlName="password2" placeholder="Confirma contraseña" aria-label="Username" aria-describedby="basic-addon1"
+                />
+                <button class="button-chulo" (click)="modal.dismiss('Cross click')" (click)="sendRegister()" type="submit">
+        Registro & Login
+      </button>
+
+            </form>
+        </div>
+    </div>
+</ng-template>

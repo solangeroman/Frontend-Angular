@@ -1,0 +1,15 @@
+.cat {
+    height: 350px
+}
+
+.imagen {
+    width: 100%;
+    height: 100%;
+}
+
+@media only screen and (max-width: 750px) {
+    .imagen {
+        height: 20vh;
+        //width: 100%;
+    }
+}

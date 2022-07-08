@@ -1,0 +1,18 @@
+<nav id="hamnav">
+    <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"><img class="logo" src="../../../assets/images/logo.png" /></a>
+    <label for="hamburger">&#9776;</label>
+    <input type="checkbox" id="hamburger" />
+    <div class="mainMenu" id="hamitems">
+        <div class="itemVacio"></div>
+        <a routerLink="alquiler" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Alquiler</a>
+        <a routerLink="venta" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Venta</a>
+        <a routerLink="nosotros" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Nosotros</a>
+        <a routerLink="eventos" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Eventos</a>
+        <div class="itemVacio"></div>
+        <a (click)="showCarrito()" routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"><img class="cart" src="../../../assets/images/cart.png" /></a>
+        <a (click)="showCarrito()" class="cartText">Carrito</a>
+        <a routerLink="" (click)="showLogin()">Login</a>
+    </div>
+</nav>
+<app-login></app-login>
+<app-carrito></app-carrito>

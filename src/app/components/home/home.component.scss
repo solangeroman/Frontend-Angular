@@ -1,0 +1,158 @@
+@import "~swiper/swiper";
+@import "~swiper/components/pagination/pagination";
+@import "~swiper/components/navigation/navigation";
+.swiper-container {
+    width: 100%;
+    height: 30%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    // width: 100%;
+    // height: 100%;
+    object-fit: cover;
+}
+
+.carouselImg {
+    height: 100vh;
+    width: 100vw;
+}
+
+.imgBgHome {
+    background-image: url("../../../assets/images/pexels-philip-warp-6185887bn.jpg");
+    opacity: 1;
+    //background-color: #cccccc;
+    // background-position: center; 
+    background-size: 100vw;
+    // background-repeat: no-repeat;
+    padding-top: 20vh;
+}
+
+.linkFlecha {
+    text-decoration: none;
+    color: white;
+     :hover {
+        text-decoration: none;
+        color: white;
+    }
+}
+
+.divQuienes {
+    padding-top: 10vh;
+    background-color: white;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    border-radius: 108px;
+    opacity: 1;
+    text-align: center;
+    padding-bottom: 15vh;
+    padding-right: 20vh;
+    padding-left: 20vh;
+    width: 70vw;
+    opacity: 0.9;
+    h2 {
+        margin-bottom: 8vh;
+    }
+}
+
+.arrowNosotros {
+    text-align: center;
+    margin-top: 10vh;
+}
+
+.cajaNosotros {
+    margin-top: 20vh;
+    padding-bottom: 20vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.card {
+    width: 25vw;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    border-radius: 45px;
+    opacity: 1;
+    text-align: center;
+    align-items: center;
+    padding-top: 5vh;
+    align-content: center;
+    display: flex;
+    opacity: 0.9;
+    a {
+        text-decoration: none;
+        color: black;
+        text-align: center;
+    }
+    .gitLogo {
+        align-items: center;
+        margin-bottom: 5%;
+    }
+}
+
+.cardImg {
+    border: 1px solid #707070;
+    opacity: 1;
+    width: 35%;
+}
+
+.centerCard {
+    margin-top: 20vh;
+}
+
+
+/* .borderCard {
+    margin-bottom: 20vh;
+} */
+
+@media only screen and (max-width: 750px) {
+    .carouselImg {
+        height: 15rem;
+    }
+    h3 {
+        font-size: 1rem;
+    }
+    .divQuienes {
+        width: 80%;
+        padding-right: 5vh;
+        padding-left: 5vh;
+        padding-bottom: 4vh;
+        padding-top: 4vh;
+        h2 {
+            margin-bottom: 3vh;
+        }
+    }
+    .arrowNosotros {
+        margin-top: 2vh;
+        margin-bottom: 2vh;
+    }
+    .card {
+        flex-wrap: wrap;
+        width: 60%;
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
+    .cajaNosotros {
+        padding-bottom: 5vh;
+    }
+}

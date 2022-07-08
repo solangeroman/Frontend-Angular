@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import "~bootstrap/scss/bootstrap";
+// MDB SCSS
+@import "~mdb-angular-ui-kit/assets/scss/mdb.scss";
+
+$nav-text-color: #707070;
+$amarillo-boton: #ffd99a;
+
+@font-face {
+  font-family: "AgencyFB";
+  src: url("./assets/fonts/AgencyFB.ttf") format("truetype");
+}
+
+$font-chula: "AgencyFB";
+
+.modal-content {
+  border-radius: 40px !important;
+  margin-top: 12rem !important;
+}
+
+.button-chulo {
+  background: #ffd99a 0% 0% no-repeat padding-box;
+  border: 1px solid #707070;
+  border-radius: 41px;
+  font: italic normal bold 24px Segoe UI;
+}
+// Font Awesome
+@import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "~@fortawesome/fontawesome-free/scss/solid.scss";
+@import "~@fortawesome/fontawesome-free/scss/regular.scss";
+@import "~@fortawesome/fontawesome-free/scss/brands.scss"; // MDB SCSS @import

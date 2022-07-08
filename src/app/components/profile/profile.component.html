@@ -1,0 +1,70 @@
+<app-imagen-dron></app-imagen-dron>
+
+<div class="container datosPerfil">
+    <div class="row">
+        <div class="imgPerfil col-md-2">
+            <img class="cardImg rounded-circle" src="https://avatars.githubusercontent.com/u/46591862?v=4" alt="foto de perfil" />
+        </div>
+        <div class="col-md-6">
+            <form>
+                <div class="form-row">
+                    <div class="col-md-6">
+                        <label for="validationDefault01">Nombre y apellidos</label>
+                        <input type="text" class="form-control" id="validationDefault01" placeholder="Nombre y apellidos" value="Solange Roman" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="validationDefault02">Teléfono</label>
+                        <input type="text" class="form-control" id="validationDefault02" placeholder="Teléfono" value="657466723" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-6">
+                        <label for="validationDefault03">Email</label>
+                        <input type="email" class="form-control" id="validationDefault03" placeholder="email@example.com" value="solangeroman@gmail.com" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="validationDefault04">Dirección</label>
+                        <input type="text" class="form-control" id="validationDefault04" placeholder="Dirección" value="C/ Toledo 125, Madrid" required>
+                    </div>
+                </div>
+                <div class="divBoton">
+                    <button id="botMod" (click)="changeSuccessMessage()" class="button-chulo" type="submit">Modificar perfil</button>
+                    <ngb-alert #selfClosingAlert *ngIf="successMessage" type="success" (closed)="successMessage = ''">Datos guardados con éxito
+                    </ngb-alert>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-4 divPass">
+            <form>
+                <div class="col-md-12">
+                    <label for="validationDefault01">Contraseña</label>
+                    <input type="password" class="form-control" id="validationDefault01" placeholder="Contraseña" required>
+                </div>
+                <div class="col-md-12">
+                    <label for="validationDefault02">Confirmar contraseña</label>
+                    <input type="password" class="form-control" id="validationDefault02" placeholder="Contraseña" required>
+                </div>
+                <div class="divBoton">
+                    <button id="botPass" (click)="changeSuccessMessagePass()" class="button-chulo" type="submit">Cambiar contraseña</button>
+                    <ngb-alert #selfClosingAlert *ngIf="successMessagePass" type="success" (closed)="successMessagePass = ''">Contraseña actualizada correctamente
+                    </ngb-alert>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="container pedidos">
+    <h2>Tus pedidos</h2>
+    <div class="control-section">
+        <ejs-grid class="sortingenabled" [dataSource]="data" allowPaging="true" allowSorting="true" [enableHover]="false" [allowSelection]="true" [toolbar]="toolbar">
+            <e-columns>
+                <e-column class="noTabla" field="order" headerText="Nº de Pedido" width="50"></e-column>
+                <e-column field="date" headerText="Fecha" width="70" textAlign="Center"></e-column>
+                <e-column field="type" headerText="Tipo" width="70" textAlign="Center"></e-column>
+                <e-column class="noTabla" field="address" headerText="Dirección de Envío" width="70" textAlign="Center"></e-column>
+                <e-column field="price" headerText="Precio (€)" width="70" textAlign="Center"></e-column>
+            </e-columns>
+        </ejs-grid>
+    </div>
+</div>

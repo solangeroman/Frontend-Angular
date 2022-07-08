@@ -1,0 +1,76 @@
+img {
+  width: 10rem;
+  height: 10rem;
+  padding: 20px;
+}
+/*.myInputs {
+  width: 100%;
+  align-content: center;
+  align-items: center;
+}
+.flex-container {
+  display: flex;
+  width: 100%;
+  padding: 0 10%;
+  margin: 20px 0;
+  justify-content: space-between;
+}
+.flex-container-buttons {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0 30%;
+  margin: 20px 0;
+}*/
+.pedidos{
+  margin-bottom: 3%;
+  h2{
+    font: italic normal bold 32px Segoe UI;
+    margin-bottom: 2%;
+  }
+}
+.divBoton{
+  margin-top: 2%;
+  text-align: center;
+}
+
+button{
+  padding-left: 4%;
+  padding-right: 4%;
+}
+
+.datosPerfil{
+  margin-top: 2%;
+}
+
+ngb-alert{
+  border-radius: 41px;
+}
+
+label{
+  font: italic normal bold 1rem Segoe UI;
+  margin-top: 1%;
+}
+
+
+// #botMod{
+//   margin-left: 30%;
+// }
+// #botPass{
+//   margin-left: 50%;
+// }
+
+@media only screen and (max-width: 750px) {
+  .noTabla{
+    display: none;
+  }
+  h2{
+    margin-top: 2%;
+  }
+  .imgPerfil{
+    text-align: center;
+  }
+  .divPass{
+    margin-top: 3%;
+  }
+}

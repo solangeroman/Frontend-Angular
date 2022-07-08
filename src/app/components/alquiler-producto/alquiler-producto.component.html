@@ -1,0 +1,30 @@
+<app-imagen-dron></app-imagen-dron>
+
+<div class="cabProd row container-fluid">
+    <div class="col-md-6 carousel-producto">
+        <ngb-carousel #carousel [interval]="5000" [pauseOnHover]="pauseOnHover" [pauseOnFocus]="pauseOnFocus" (slide)="onSlide($event)">
+            <ng-template ngbSlide *ngFor="let img of images; index as i">
+                <div class="picsum-img-wrapper">
+                    <img class="carouselImg" [src]="img" alt="Imagen de dron del carrusel">
+                </div>
+            </ng-template>
+        </ngb-carousel>
+    </div>
+
+    <div class="titulomarca col-md-6">
+        <h3 class="titulo">Mavic Air 2</h3>
+        <h5 class="descripcion">Drone Quadcopter UAV con Cámara de 48MP 4K Video 1/2 Pulgadas CMOS Sensor de Cardán de 3 Ejes, Sin Tarjeta, Sin Care Refresh, Tiempo de Vuelo 34 min, ActiveTrack 3.0, Color Gris</h5>
+        <hr>
+
+        <div class="container">
+            <form [formGroup]="miformulario">
+                Correo: <input [class.is-invalid]="miformulario.get('username').touched && miformulario.get('username').invalid" type="email" class="form-control" formControlName="username"> Fecha: <input [class.is-invalid]="miformulario.get('userdate').touched && miformulario.get('userdate').invalid"
+                    type="date" class="form-control" formControlName="userdate"> Numero de horas: <input [class.is-invalid]="miformulario.get('usernumber').touched && miformulario.get('usernumber').invalid" type="number" class="form-control" formControlName="usernumber"><br/>
+            </form>
+        </div>
+        <button class="comprar" (click)="changeSuccessMessage()">Añadir al carrito</button>
+        <ngb-alert #selfClosingAlert *ngIf="successMessage" type="success" (closed)="successMessage = ''">Producto añadido al carrito correctamente
+        </ngb-alert>
+    </div>
+    <hr>
+</div>

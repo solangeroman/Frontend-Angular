@@ -1,0 +1,53 @@
+<ngb-carousel #carousel [interval]="5000" [pauseOnHover]="pauseOnHover" [pauseOnFocus]="pauseOnFocus" (slide)="onSlide($event)">
+    <ng-template ngbSlide *ngFor="let img of images; index as i">
+        <div class="carousel-caption">
+            <a class="linkFlecha" routerLink="" fragment="quienesSomos">
+                <h3>Quiénes somos</h3>
+                <svg id="icon_navigation_expand_more_24px" data-name="icon/navigation/expand_more_24px" xmlns="http://www.w3.org/2000/svg" width="38" height="32" viewBox="0 0 38 32">
+          <rect id="Boundary" width="32" height="32" fill="none" />
+          <path id="_Color" data-name=" ↳Color" d="M28.24,0,16,12.2,3.76,0,0,3.755,16,19.733,32,3.755Z"
+            transform="translate(6 8.6)" fill="#fff" />
+        </svg>
+            </a>
+        </div>
+        <div class="picsum-img-wrapper">
+            <img class="carouselImg" [src]="img" alt="Imagen de dron del carrusel" />
+        </div>
+    </ng-template>
+</ngb-carousel>
+
+<div class="imgBgHome">
+    <div class="container divQuienes">
+        <h2 id="quienesSomos">DronU</h2>
+        <p>Nuestra empresa nació de un proyecto universitario que tenía como objetivo desarrollar una página web usable y usando la metodología Design Thinking en su desarollo. Para ello se creó como idea una página de drones. Se inició como una página con
+            un simple alquiler que rápidamente escaló a muchos más servicios como son la venta y eventos.
+        </p>
+    </div>
+    <div class="arrowNosotros">
+        <a class="linkFlecha" routerLink="" fragment="nosotros">
+            <h3>Quien soy</h3>
+            <svg id="icon_navigation_expand_more_24px" data-name="icon/navigation/expand_more_24px" xmlns="http://www.w3.org/2000/svg" width="38" height="32" viewBox="0 0 38 32">
+        <rect id="Boundary" width="32" height="32" fill="none" />
+        <path id="_Color" data-name=" ↳Color" d="M28.24,0,16,12.2,3.76,0,0,3.755,16,19.733,32,3.755Z"
+          transform="translate(6 8.6)" fill="#fff" />
+      </svg>
+        </a>
+    </div>
+    <div id="nosotros" class="cajaNosotros">
+        <div class="card centerCard">
+            <img class="cardImg rounded-circle" src="https://avatars.githubusercontent.com/u/46591862?v=4" alt="Card image" />
+            <div class="card-body">
+                <h4 class="card-title">Solange Roman</h4>
+                <span>
+          <a href="https://github.com/solangeroman" target="_blank">
+            <img class="gitLogo" src="../../../assets/images/github_64px.png" alt="Logo GitHub" />
+            /solangeroman
+          </a>
+        </span>
+                <ul>
+                    <li>Desarrollador Frontend</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
